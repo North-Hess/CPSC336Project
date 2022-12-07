@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 
-<?php
-include 'db_connection.php';
-$conn = OpenCon();
-        echo "Connected Successfully";
-CloseCon($conn);
-?>
 
 <html lang="en">
 <head>
@@ -37,8 +31,7 @@ CloseCon($conn);
 <main>
 
 <div id="tablefont">
-<form method="get" action"add_item.html">
-<form method="post" action="display_item_list.php">
+<form method="post" action="add_item.php">
 <label for="ItemID"> Item ID:     </label><input type="text" id="ItemID" name="ItemID" required="required">
 <br><br>
 <label for="ItemName"> Item Name:      </label><input type="text" id="ItemName" name="ItemName" required="required">
