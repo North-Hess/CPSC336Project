@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+
+<?php
+include 'db_connection.php';
+$conn = OpenCon();
+        echo "Connected Successfully";
+CloseCon($conn);
+?>
+
 <html lang="en">
 <head>
 
@@ -16,26 +24,17 @@
 
 <nav>
 	<ul>
-		<li><a href="index.html">Add Item</a></li>
-
-		<li><a href="remove.html">Delete Item</a></li>
-
-		<li><a href="item_list.html">Item List</a></li>
-
-
+		<li><a href="index.html">Home</a></li>
+		<li><a href="add_item.html">Add Item</a></li>
+		<li><a href="remove_item.html">Delete Item</a></li>
+		<li><a href="display_item_list.php">Display Item List</a></li>
 	</ul>
-
-
-
-
-
-
 </nav>
 <main>
 
 
 <div id="tablefont">
-<form method="post" action="https://webdevbasics.net/scripts/">
+<form method="post" action="display_item_list.php">
 <label for="ItID"> Item ID:     </label><input type="text" id="fName" name="fName" required="required">
 <!-- <br><br>
 <label for="ItName"> Item Name:      </label><input type="text" id="lName" name="lName" required="required">

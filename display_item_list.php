@@ -1,4 +1,8 @@
+<?php
+require_once "db_connection.php";
+?>
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 
@@ -11,7 +15,7 @@
 <body>
 
 <header>
-	<h1><a href="index.html">Inventory</a></h1>
+	<h1><a href="index.html"> Inventory</a></h1>
 </header>
 
 <nav>
@@ -26,26 +30,28 @@
 	</ul>
 
 </nav>
+
 <main>
 
-<br><br>
+<table>
+	<tr>
+		<th>Item ID</th>
+		<th>Item Name</th>
+		<th>Item Quantity</th>
+	</tr>
+	<?php
+	$query = "SELECT * FROM inventory";
+	$query_result = mysqli_query($conn, $query);
 
-<form action="add_item.html">
-<input type="submit" value="Add Item" id="add_item">
-</form>
+	while($item = mysqli_fetch_assoc($query_result)) {
+	echo '<tr><td>'.$item['item_id'].'</td>';
+	echo '<td>'.$item['item_name'].'</td>';
+	echo '<td>'.$item['item_quantity'].'</td></tr>'; 
+}
+	?>
 
-<form action="remove_item.html">
-<input type="submit" value="Remove Item" id="remove_item">
-</form>
+</table>
 
-<form action="display_item_list.php">
-<input type="submit" value="Display Item List" id="display_item_list">
-</form>
-
-
-
-</form>
-</div>
 </main>
 <br><br><br>
 <footer>Copyright &copy; CPSC 336 Inventory System<br>
@@ -53,3 +59,4 @@
 </footer>
 </body>
 </html>
+
