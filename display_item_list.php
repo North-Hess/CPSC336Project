@@ -24,7 +24,7 @@ require_once "db_connection.php";
 
 		<li><a href="add_item.html">Add Item</a></li>
 
-		<li><a href="remove_item.html">Delete Item</a></li>
+		<li><a href="remove_item.html">Remove Item</a></li>
 
 		<li><a href="display_item_list.php">Display Item List</a></li>
 	</ul>
@@ -44,9 +44,9 @@ require_once "db_connection.php";
 	$query_result = mysqli_query($conn, $query);
 
 	while($item = mysqli_fetch_assoc($query_result)) {
-	echo '<tr><td>'.$item['item_id'].'</td>';
-	echo '<td>'.$item['item_name'].'</td>';
-	echo '<td>'.$item['item_quantity'].'</td></tr>'; 
+	echo '<tr><td style="padding:15px;color:black">'.$item['item_id'].'</td>';
+	echo '<td style="color:black;text-align:center">'.$item['item_name'].'</td>';
+	echo '<td style="color:black;text-align:right">'.$item['item_quantity'].'</td></tr>'; 
 }
 	?>
 
