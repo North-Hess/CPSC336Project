@@ -7,7 +7,8 @@ table  {color: #0000FF ;
 	font-size: 200%;
 	padding: 0;
 	text-align: center;
-	text-decoration: none;}
+	text-decoration: none;
+	margin: auto;}
 
 h4 {color: blue;
 		font-size: 110%;
@@ -56,9 +57,9 @@ nav ul ul li a {display: block;
 
 header a {color: black;
 		text-decoration: none;
-		}
+font-size: 300%;	}
 
-nav {background-color: red;}
+nav {background-color: blue;}
 
 footer { font-size: small;
 	   text-align: center;
@@ -87,9 +88,10 @@ p {text-align: center;}
 video, iframe {display: block;
 				margin: auto;}
 
-table td {font-size: 400%;
+table td {font-size: 100%;
 			color:  blue;
-	text-align: center	}
+	text-align: center;
+	margin: auto;	}
 
 
 @media (max-width: 600px)
@@ -105,5 +107,5 @@ table td {font-size: 400%;
 
 				}}
 
-input {font-size: 200%;}
+th {padding: 20px;}
 
